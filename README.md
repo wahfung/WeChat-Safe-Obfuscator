@@ -1,6 +1,6 @@
 # 微信小程序安全盾 (WeChat Safe Obfuscator)
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Next.js](https://img.shields.io/badge/Next.js-14+-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Next.js](https://img.shields.io/badge/Next.js-16-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 
 这就一款基于浏览器的、**纯前端**微信小程序代码混淆工具。它旨在为开发者提供一种安全、高效且直观的方式来保护其小程序源代码，同时确保混淆后的代码 100% 符合微信小程序平台的安全规范（如 `eval` 禁用、WXS 兼容性等）。
 
@@ -40,7 +40,16 @@ npm run dev
 
 访问 [http://localhost:3000](http://localhost:3000) 即可使用。
 
-### 3. 测试数据
+### 3. 生产构建与启动
+
+```bash
+npm run build
+npm run start
+```
+
+生产服务默认监听 `3000` 端口，可通过 `PORT` 环境变量调整。
+
+### 4. 测试数据
 
 项目内置了一个演示用的测试包生成脚本：
 
@@ -49,6 +58,7 @@ node scripts/create-test-zip.js
 ```
 
 运行后访问 `http://localhost:3000/demo.zip` 下载测试包。
+
 
 ## ⚙️ 混淆配置 (WeChat Safe Mode)
 
@@ -63,7 +73,7 @@ node scripts/create-test-zip.js
 ## 📁 目录结构
 
 ```
-1195/
+repo/
 ├── src/
 │   ├── app/                 # Next.js App Router 页面
 │   ├── components/          # React UI 组件
